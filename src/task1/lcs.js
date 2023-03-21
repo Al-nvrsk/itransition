@@ -1,0 +1,1 @@
+console.log((a=>{let b=a.sort((a,b)=>a.length-b.length)[0],d=c=b?.length,e,f;for(d;d;d--)for(f=0;f<=c-d;f++)if(e=b.substring(f,f+d),a.every(a=>~a.indexOf(e)))return e;return''})(process.argv.slice(2)))
