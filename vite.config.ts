@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import dotenv from 'dotenv';
-import path from 'path';
 
 dotenv.config();
 
@@ -12,8 +11,6 @@ export default defineConfig({
     port: Number(process.env.CLIENT_PORT) || 3000,
   },
   define: {
-    __BASE_URL__: `'${process.env.HOST}${process.env.SERVER_PORT}'`,
+    __BASE_URL__: `'${process.env.BASE_URL}'`,
   }
 })
-
-// `'${process.env.TELEGRAM_FEEDBACK_TOKEN}'`
