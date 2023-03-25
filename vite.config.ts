@@ -12,7 +12,7 @@ export default defineConfig({
     port: Number(process.env.CLIENT_PORT) || 3000,
   },
   define: {
-    __BASE_URL__: `'${process.env.HOST}:${process.env.SERVER_PORT}'`,
+    __BASE_URL__: `'${process.env.HOST}${process.env.SERVER_PORT}'`,
   }
 })
 

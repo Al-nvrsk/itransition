@@ -12,7 +12,7 @@ dotenv.config({ path: path.join(__dirname, '..', '..','..', '.env') });
 
 async function startServer() {
   const app = express();
-  const port = Number(process.env.SERVER_PORT) || 5000
+  const port = Number(process.env.SERVER_PORT) || 5001
   app.use(cors())
   app.use(express.json())
   app.use('/api', router)
