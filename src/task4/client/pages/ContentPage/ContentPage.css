@@ -1,0 +1,43 @@
+.btnConteiner {
+    display: flex;
+    justify-content: end;
+} 
+
+.unblockBtn,
+.blockBtn,
+.deleteBtn,
+.logoutBtn {
+    margin: 24px;
+}
+    
+.unblockBtn:hover,
+.blockBtn:hover,
+.deleteBtn:hover,
+.logoutBtn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.unblockBtn:active,
+.blockBtn:active,
+.deleteBtn:active,
+.logoutBtn:active {
+    transform: scale(1);
+}
+
+.unblockBtn:hover {
+    color: green;
+}
+
+.blockBtn:hover {
+    color: orange;
+}
+    
+.deleteBtn:hover {
+color: red;
+}
+    
+.logoutBtn:hover {
+    color: blue;
+}
+

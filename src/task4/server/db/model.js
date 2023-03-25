@@ -3,7 +3,8 @@ import DataTypes from 'sequelize'
 
 export const User = sequelize.define( 'user', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true , unique: true},
-    name: {type: DataTypes.STRING, unique: true},
+    firstName: {type: DataTypes.STRING},
+    secondName: {type: DataTypes.STRING},
     email: {type: DataTypes.STRING, unique: true},
     password: {type: DataTypes.STRING},
     createdAt: {
@@ -11,10 +12,15 @@ export const User = sequelize.define( 'user', {
         defaultValue: DataTypes.NOW,
         allowNull: false
       },
-      lastLoginAt: {
+    lastLoginAt: {
         type: DataTypes.DATE,
         allowNull: true
       },
-    // loginName: {type: DataTypes.STRING},
     role: {type: DataTypes.STRING, defaultValue: 'Active'},
-})
+  },{
+    hooks: {
+      beforeUpdate: (user) => {
+        user.lastLoginAt = new Date();
+      }
+    }
+  })

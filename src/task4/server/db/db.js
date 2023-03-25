@@ -2,19 +2,17 @@ import { Sequelize } from 'sequelize'
 import dotenv from 'dotenv';
 import path from 'path';
 
-dotenv.config();
-const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env
-
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+dotenv.config()
+dotenv.config({ path: path.join(__dirname,'..', '..', '..','..', '.env') });
+const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD } = process.env
 
 const sequelizeOptions = {
-  host: 'dumbo.db.elephantsql.com',
-//   port: Number(PG_PORT),
-  username: 'crjgpwuy',
-  password: 'MTHE3SxTiFPLwX84ZDLLpWnlsV-yMztc',
-  database: 'crjgpwuy',
+  host: PGHOST,
+  username: PGUSER,
+  password: PGPASSWORD,
+  database: PGDATABASE,
   dialect: 'postgres',
-  
-//   models: [path.join(__dirname, '/models')],
 };
 
 export const sequelize = new Sequelize(sequelizeOptions);

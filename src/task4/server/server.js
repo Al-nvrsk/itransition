@@ -6,10 +6,9 @@ import path from 'path';
 import { postgresConnect } from './db/db.js';
 import router from './routes/index.js'
 import { errorHandlingMiddleWare } from './middleWare/errorHandlingMiddleWare.js'
-
 dotenv.config()
-// dotenv.config({ path: path.join(__dirname, '..', '..', '.env') })
-
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+dotenv.config({ path: path.join(__dirname, '..', '..','..', '.env') });
 
 async function startServer() {
   const app = express();
@@ -22,7 +21,7 @@ async function startServer() {
   postgresConnect()
 
   app.get('/api', (_, res) => {
-    res.json('👋 Howdy from the server :)');
+    res.json('👋 Hey from the server :)');
   });
 
 app.listen(port, () => {

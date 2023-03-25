@@ -1,0 +1,16 @@
+.registration-page {
+    height: 100vh;
+}
+
+.registration-page__col {
+    width: 300px;
+    text-align: center;
+}
+
+.registration-page__form {
+    text-align: left;
+}
+
+.registration-page__button {
+    width: 100%;
+}

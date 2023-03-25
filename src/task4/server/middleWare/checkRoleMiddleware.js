@@ -1,4 +1,5 @@
 import jwt from 'jsonwebtoken'
+import { key } from '../controllers/UserController'
 
 export const checkRoleMiddleware = (role) => {
     return function (req, res, next) {
@@ -10,10 +11,7 @@ export const checkRoleMiddleware = (role) => {
         if(!token) {
             return res.status(401).json({message: 'Не авторизован!'})
         }
-        const decoded = jwt.verify(token, process.env.SECRET_KEY)
-        if(decoded.role !== role){
-            return res.status(403).json({message: 'Нет доступа!'})
-        }
+        const decoded = jwt.verify(token, key)
         req.user = decoded
         next()
     } catch (e) {

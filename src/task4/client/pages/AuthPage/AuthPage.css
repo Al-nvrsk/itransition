@@ -1,0 +1,18 @@
+.auth-page {
+    height: 100vh;
+}
+
+.auth-page__col {
+      width: 300px;
+      text-align: center;
+}
+
+.auth-page__form {
+      text-align: left;
+}
+
+.auth-page__button {
+      width: 100%;
+}
+
+  
