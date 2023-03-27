@@ -22,6 +22,13 @@ export const MenuPage = () => {
             >
                 Task5
             </Button>
+            <Button 
+                htmlType='button'
+                className="menu-page__button"
+                onClick={() => navigate(routePath.task6)}
+            >
+                Task6
+            </Button>
         </div>
     )
 }

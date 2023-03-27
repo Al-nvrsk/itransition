@@ -7,6 +7,7 @@ import { AuthPage } from '../task4/client/pages/AuthPage/AuthPage';
 import { RequireAuth } from '../task4/client/utils/RequireAuth';
 import { ContentPage } from '../task4/client/pages/ContentPage/ContentPage';
 import { MenuPage } from '../pages/MenuPage';
+import { MessagePage } from '../task6/client/pages/MessagePage/MessagePage';
 
 export const AppRouter = () => {
 
@@ -36,6 +37,11 @@ export const AppRouter = () => {
                     </RequireAuth>
                 }
             />
+            <Route
+                path={routePath.task6}
+                element={ <MessagePage /> }
+            />
+            <Route path="*" element={<MenuPage />} />
         </Routes>
     );
 };

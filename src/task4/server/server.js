@@ -9,6 +9,7 @@ import { errorHandlingMiddleWare } from './middleWare/errorHandlingMiddleWare.js
 dotenv.config()
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 dotenv.config({ path: path.join(__dirname, '..', '..','..', '.env') });
+import {wsServer} from '../../task6/server/wsServer.js'
 
 async function startServer() {
   const app = express();
@@ -17,7 +18,7 @@ async function startServer() {
   app.use(express.json())
   app.use('/api', router)
   app.use(errorHandlingMiddleWare)
-
+  wsServer(app)
   postgresConnect()
 
   app.get('/api', (_, res) => {
