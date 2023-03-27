@@ -19,7 +19,7 @@ export const createConnection = async(props: CreateConnectionProps) => {
         return
     }
 
-    socketRef.current = await new WebSocket(`ws://localhost:5001`) 
+    socketRef.current = await new WebSocket(__WS_HOST__) 
     socketRef.current.addEventListener('open', () => {
         console.log('Соединение установлено')
     })

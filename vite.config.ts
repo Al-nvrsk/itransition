@@ -12,6 +12,7 @@ export default defineConfig({
   },
   define: {
     __BASE_URL__: `'${process.env.BASE_URL}'`,
-    __API_KEY_EDITOR__: `'${process.env.API_KEY_EDITOR}'`
+    __API_KEY_EDITOR__: `'${process.env.API_KEY_EDITOR}'`,
+    __WS_HOST__: `'${process.env.WS_HOST}'`
   }
 })
