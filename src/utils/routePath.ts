@@ -4,5 +4,7 @@ export const routePath: Record<string, string> = {
     auth: '/task4/auth',
     registration: '/task4/registration',
     task5: '/task5',
-    task6: '/task6'
+    task6: '/task6',
+    task7: '/task7',
+    tictactoe: '/task7/tictactoe'
 };
