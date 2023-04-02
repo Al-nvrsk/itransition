@@ -9,7 +9,8 @@ import { ContentPage } from '../task4/client/pages/ContentPage/ContentPage';
 import { MenuPage } from '../pages/MenuPage';
 import { MessagePage } from '../task6/client/pages/MessagePage/MessagePage';
 import { Task7 } from '../task7/client/Task7';
-import { TicTacToe } from '../task7/client/games/ticTacToe/TicTacToe';
+import { TicTacToeApp } from '../task7/client/games/ticTacToe/TicTacToeApp';
+import { DotsAndBoxesApp } from '../task7/client/games/dotsAndBoxes/DotsAndBoxesApp';
 
 export const AppRouter = () => {
 
@@ -49,7 +50,11 @@ export const AppRouter = () => {
             />
             <Route
                 path={routePath.tictactoe}
-                element={ <TicTacToe /> }
+                element={ <TicTacToeApp /> }
+            />
+            <Route
+                path={routePath.dotsandboxes}
+                element={<DotsAndBoxesApp />}
             />
             <Route path="*" element={<MenuPage />} />
         </Routes>

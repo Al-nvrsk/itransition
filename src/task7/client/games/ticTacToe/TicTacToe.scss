@@ -6,28 +6,34 @@
 	height: 100vh;
 	flex-direction: column;
 	background-color: var(--bg-color);
+
 	.screen {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-    .intro {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom:30px;
-    }
+
+		.intro {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom:30px;
+		}
+
 		h3 {
 			font-size: 3rem;
 		}
+
 		p {
 			font-size: 1.2rem;
-      margin-top:10px;
+			margin-top:10px;
 		}
-    .instructions{
-      :nth-child(2){
-        margin-left:auto;
-      }
-    }
+    
+		.instructions{
+			:nth-child(2){
+				margin-left:auto;
+			}
+		}
+
 		code {
 			width: fit-content;
 			padding: 5px 20px;
@@ -36,13 +42,12 @@
 			font-family: inherit;
 			border-radius: 0.2rem;
 		}
+
 		input {
-			// Variables
 			--input-color: #99a3ba;
 			--input-border: #cdd9ed;
 			--input-background: #fff;
 			--input-border-focus: #275efe;
-			// SCSS
 			display: inline-block;
 			padding: 8px 16px;
 			line-height: 25px;

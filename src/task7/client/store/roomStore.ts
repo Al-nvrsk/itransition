@@ -1,22 +1,12 @@
 import { create } from 'zustand'
 import  immer  from 'immer'
-import { devtools } from 'zustand/middleware'
-import { Socket } from 'socket.io-client'
+import { RoomSchema, RoomState } from '../types/types'
 
-interface RoomProps {
-    id: string,
-    players: string,
-    game: string,
-    status: string
-}
 
-interface RoomStoreSchema {
-    Rooms: RoomProps[]
-    setRooms: (roomArr: RoomProps[]) => void,
-}
-
-export const useRoomStore = create<RoomStoreSchema>()(immer((set) => ({
-    Rooms: null,
-    setRooms: (roomArr: RoomProps[]) => set(() => ({Rooms:roomArr})),
+export const useRoomStore = create<RoomSchema>()(immer((set) => ({
+    currentRoomState: null,
+    roomList: [],
+    setCurrentRoomState: (value: RoomState) => set(() => ({currentRoomState: value})),
+    setRoomList: (value: RoomState[]) => set(() => ({roomList: value})) ,
 })))
 

@@ -26,8 +26,16 @@ export const MenuPage = () => {
                 htmlType='button'
                 className="menu-page__button"
                 onClick={() => navigate(routePath.task6)}
+                disabled={true}
             >
                 Task6
+            </Button>
+            <Button 
+                htmlType='button'
+                className="menu-page__button"
+                onClick={() => navigate(routePath.task7)}
+            >
+                Task7
             </Button>
         </div>
     )

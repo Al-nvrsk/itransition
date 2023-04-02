@@ -8,12 +8,14 @@ interface SquareProps {
 	isWinner: boolean;
 }
 
-export const Square = ({ nextValue, value, onClick, isWinner }: SquareProps) => {
+export const Square = (props: SquareProps) => {
+	const { nextValue, value, onClick, isWinner } = props
 	const [ hovered, setHovered ] = useState(false);
 	const solid = value ? 'solid' : '';
-  const ghost = hovered ? 'ghost' : '';
-  const solidOrGhost = solid || ghost;
+	const ghost = hovered ? 'ghost' : '';
+	const solidOrGhost = solid || ghost;
 	const winner = isWinner ? 'winner' : '';
+	
 	return (
 		<a
 			className={`square ${value || nextValue} ${solidOrGhost} ${winner}`}

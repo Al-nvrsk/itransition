@@ -6,5 +6,6 @@ export const routePath: Record<string, string> = {
     task5: '/task5',
     task6: '/task6',
     task7: '/task7',
-    tictactoe: '/task7/tictactoe'
+    tictactoe: '/task7/tictactoe',
+    dotsandboxes: '/task7/dotsandboxes'
 };
